@@ -1,0 +1,1394 @@
+INFO-FLOW: Workspace /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1 opened at Sun Oct 29 21:03:17 EDT 2023
+Execute     set_part xc7z020clg484-1 
+Execute       ap_part_info -name xc7z020clg484-1 -data single -quiet 
+Command       ap_part_info done; 4.42 sec.
+Execute       ap_part_info -name xc7z020clg484-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.15 sec.
+Command         ap_source done; 0.15 sec.
+Execute         ap_part_info -data single -name xc7z020-clg484-1 
+Execute         ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.37 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 4.94 sec.
+Execute     config_compile -name_max_length 40 
+INFO: [XFORM 203-1161] The maximum of name length is set into 40.
+Execute     create_clock -period 10 
+Execute       config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     csim_design -O 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       is_encrypted /home/nnd25/ECE6775/lab4/ecelinux/bnn_test.cpp 
+Execute       is_xip /home/nnd25/ECE6775/lab4/ecelinux/bnn_test.cpp 
+Execute       is_encrypted /home/nnd25/ECE6775/lab4/ecelinux/bnn.cpp 
+Execute       is_xip /home/nnd25/ECE6775/lab4/ecelinux/bnn.cpp 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 3.5 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 9.94 sec.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute         get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute         get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'bnn.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         is_m_axi_addr64 
+INFO-FLOW: Handling bnn.cpp as C++
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         is_encrypted bnn.cpp 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "bnn.cpp"   -std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot" -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp" 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E bnn.cpp -std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp
+Command         clang done; 2.27 sec.
+Execute         tidy_31 xilinx-xfmat-array-geometry /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp std=c++11 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.36 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute         clang -syntaxcheck -src /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc" -hls  -std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot" -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp"  -o "/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/useless.bc
+Command         clang done; 2.78 sec.
+INFO-FLOW: Done: GCC PP time: 6.4 seconds per iteration
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute         list_core -type functional_unit 
+Execute         tidy_31 xilinx-systemc-detector /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp std=c++11 -directive=/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.24 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute         tidy_31 xilinx-directive2pragma /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp std=c++11 -directive=/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.22 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.bnn.pp.0.cpp.diag.yml /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 -fstrict-dataflow > /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.bnn.pp.0.cpp.out.log 2> /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.bnn.pp.0.cpp.err.log 
+Command         ap_eval done; 1.32 sec.
+Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp std=c++11 
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/tidy-3.1.bnn.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/tidy-3.1.bnn.pp.0.cpp.out.log 2> /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/tidy-3.1.bnn.pp.0.cpp.err.log 
+Command           ap_eval done; 2.6 sec.
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/xilinx-legacy-rewriter.bnn.pp.0.cpp.out.log 2> /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/xilinx-legacy-rewriter.bnn.pp.0.cpp.err.log 
+Command           ap_eval done; 1.12 sec.
+Command         tidy_31 done; 3.78 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 6.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pragma.1.cpp std=c++11 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pragma.1.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command         tidy_31 done; 3.61 sec.
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Processing labels
+Execute         clang -src /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pragma.2.cpp"  -std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot" -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.bc" 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.pragma.2.cpp -std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.bc
+Command         clang done; 2.8 sec.
+INFO-FLOW: Linking Debug ...
+Execute         llvm-ld /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn.g.bc -hls-opt -except-internalize dut -L/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.g 
+Command         llvm-ld done; 1.1 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 612 ; free virtual = 14158
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 611 ; free virtual = 14157
+Execute         get_config_sdx -target 
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute           transform -promote-dbg-pointer /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.pp.bc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute           llvm-ld /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/lib -lfloatconversion -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.g.0 
+Command           llvm-ld done; 1.1 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top dut -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.g.0.bc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1.1' (./layer.h:74) in function 'void conv<1, 16, 18>(bool (*) [FORWARD_REFERENCE][FORWARD_REFERENCE], bool (*) [((FORWARD_REFERENCE) - (F)) + (1)][((FORWARD_REFERENCE) - (F)) + (1)], ap_int<8> const*, bool const (*) [FORWARD_REFERENCE][3][3])' completely with a factor of 1.
+Command           transform done; 8.66 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 568 ; free virtual = 14117
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.g.1.bc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'dense<512, 256>' into 'bnn_xcel' (bnn.cpp:95) automatically.
+INFO: [XFORM 203-602] Inlining function 'sign<256>' into 'bnn_xcel' (bnn.cpp:96) automatically.
+INFO: [XFORM 203-602] Inlining function 'dense<256, 10>' into 'bnn_xcel' (bnn.cpp:97) automatically.
+INFO: [XFORM 203-602] Inlining function 'argmax' into 'bnn_xcel' (bnn.cpp:98) automatically.
+Command           transform done; 14.22 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] bnn.cpp:29: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 546 ; free virtual = 14099
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.g.1.bc to /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.o.1.bc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP_MP_Y' (./layer.h:101) in function 'max_pool<32, 8>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1.1' (./layer.h:70) in function 'conv<16, 32, 10>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP_MP_Y' (./layer.h:101) in function 'max_pool<16, 16>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1.1' (./layer.h:70) in function 'conv<1, 16, 18>' for pipelining.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'LOOP_PAD_M' (./layer.h:22) in function 'pad<1, 16>' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'LOOP_PAD_INIT_M' (./layer.h:41) in function 'initialize_padded_memory<1, 18, 1>' automatically.
+INFO: [HLS 200-489] Unrolling loop 'LOOP_D_M' (./layer.h:194) in function 'dense<256, 10>' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'LOOP_SIGN' (./layer.h:152) in function 'sign<256>' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'LOOP_D_M' (./layer.h:194) in function 'dense<512, 256>' completely with a factor of 512.
+INFO: [HLS 200-489] Unrolling loop 'LOOP_MP_C' (./layer.h:105) in function 'max_pool<32, 8>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'LOOP_MP_R' (./layer.h:108) in function 'max_pool<32, 8>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (./layer.h:72) in function 'conv<16, 32, 10>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1.1' (./layer.h:74) in function 'conv<16, 32, 10>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'LOOP_MP_C' (./layer.h:105) in function 'max_pool<16, 16>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'LOOP_MP_R' (./layer.h:108) in function 'max_pool<16, 16>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (./layer.h:72) in function 'conv<1, 16, 18>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'LOOP_PAD_M' (./layer.h:22) in function 'pad<1, 16>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'LOOP_PAD_INIT_M' (./layer.h:41) in function 'initialize_padded_memory<1, 18, 1>' completely with a factor of 1.
+INFO: [XFORM 203-102] Partitioning array 'input' (bnn.cpp:20) in dimension 1 automatically.
+WARNING: [XFORM 203-180] Applying partition directive (./layer.h:189:1) and reshape directive (bnn.cpp:50:1) on the same variable 'w_fc2'  may lead to unexpected synthesis behaviors.
+WARNING: [XFORM 203-180] Applying partition directive (./layer.h:189:1) and reshape directive (bnn.cpp:49:1) on the same variable 'w_fc1'  may lead to unexpected synthesis behaviors.
+INFO: [XFORM 203-131] Reshaping array 'w_conv1'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w_conv2'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w_fc1'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w_fc2'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'threshold_conv1.V'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'threshold_conv2.V'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'input_padded' (bnn.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'conv1' (bnn.cpp:59) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'conv1_pooled' (bnn.cpp:60) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'conv1_pooled_padded' (bnn.cpp:61) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'conv2' (bnn.cpp:69) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'conv2_pooled' (bnn.cpp:70) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'w_fc1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'reshaped' (bnn.cpp:74) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'w_fc2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'signed1' (bnn.cpp:76) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dense1.V' (bnn.cpp:75) in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'dense1.V' (bnn.cpp:75) accessed through non-constant indices on dimension 1 (./layer.h:198:18), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+WARNING: [XFORM 203-104] Completely partitioning array 'w_fc1' accessed through non-constant indices on dimension 1 (./layer.h:196:2), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+WARNING: [XFORM 203-104] Completely partitioning array 'reshaped' (bnn.cpp:74) accessed through non-constant indices on dimension 1 (./layer.h:134:9), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-102] Partitioning array 'w_conv1' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_conv2' in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'initialize_padded_memory<1, 18, 1>' into 'bnn_xcel' automatically.
+INFO: [XFORM 203-602] Inlining function 'pad<1, 16>' into 'bnn_xcel' automatically.
+INFO: [XFORM 203-602] Inlining function 'argmax' into 'bnn_xcel' (bnn.cpp:98) automatically.
+Command           transform done; 150.59 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i512P.i8' into 'dense<512, 256>' (./layer.h:196).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.10i256P.i4' into 'dense<256, 10>' (./layer.h:196).
+INFO: [XFORM 203-11] Balancing expressions in function 'max_pool<32, 8>' (./layer.h:94)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'max_pool<16, 16>' (./layer.h:94)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'dense<512, 256>' (./layer.h:188)...511 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'dense<256, 10>' (./layer.h:188)...255 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv<16, 32, 10>' (./layer.h:63)...48 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv<1, 16, 18>' (./layer.h:63)...3 expression(s) balanced.
+Command           transform done; 53.7 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:04:17 ; elapsed = 00:04:27 . Memory (MB): peak = 1297.711 ; gain = 655.219 ; free physical = 290 ; free virtual = 13874
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.o.2.bc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_MP_X' (./layer.h:99:38) in function 'max_pool<32, 8>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_MP_M' (./layer.h:97:32) in function 'max_pool<32, 8>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_MP_X' (./layer.h:99:38) in function 'max_pool<16, 16>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOOP_MP_M' (./layer.h:97:32) in function 'max_pool<16, 16>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1.1' (./layer.h:68:21) in function 'conv<16, 32, 10>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (./layer.h:67:19) in function 'conv<16, 32, 10>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (./layer.h:66:17) in function 'conv<16, 32, 10>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1.1' (./layer.h:68:21) in function 'conv<1, 16, 18>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (./layer.h:67:19) in function 'conv<1, 16, 18>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (./layer.h:66:17) in function 'conv<1, 16, 18>'.
+INFO: [HLS 200-472] Inferring partial write operation for 'output' (./layer.h:27:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'output' (./layer.h:114:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'output' (./layer.h:114:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'input' (./layer.h:46:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'input[0]' (bnn.cpp:29:60)
+INFO: [HLS 200-472] Inferring partial write operation for 'output' (./layer.h:81:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'output' (./layer.h:81:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'input_padded' (./layer.h:46:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'input_padded' (./layer.h:27:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'output.V' (./layer.h:198:18)
+Command           transform done; 81.79 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:05:39 ; elapsed = 00:05:49 . Memory (MB): peak = 1617.711 ; gain = 975.219 ; free physical = 236 ; free virtual = 13671
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 310.27 sec.
+Command       elaborate done; 332.48 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'dut' ...
+Execute         ap_set_top_model dut 
+WARNING: [SYN 201-103] Legalizing function name 'initialize_padded_memory<16, 10, 0>' to 'initialize_padded_memory_16_10_0_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv<1, 16, 18>' to 'conv_1_16_18_s'.
+WARNING: [SYN 201-103] Legalizing function name 'max_pool<16, 16>' to 'max_pool_16_16_s'.
+WARNING: [SYN 201-103] Legalizing function name 'pad<16, 8>' to 'pad_16_8_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv<16, 32, 10>' to 'conv_16_32_10_s'.
+WARNING: [SYN 201-103] Legalizing function name 'max_pool<32, 8>' to 'max_pool_32_8_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense<512, 256>' to 'dense_512_256_s'.
+WARNING: [SYN 201-103] Legalizing function name 'sign<256>' to 'sign_256_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense<256, 10>' to 'dense_256_10_s'.
+Execute         get_model_list dut -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model dut 
+Execute         preproc_iomode -model bnn_xcel 
+Execute         preproc_iomode -model dense<256, 10> 
+Execute         preproc_iomode -model sign<256> 
+Execute         preproc_iomode -model dense<512, 256> 
+Execute         preproc_iomode -model flatten 
+Execute         preproc_iomode -model max_pool<32, 8> 
+Execute         preproc_iomode -model conv<16, 32, 10> 
+Execute         preproc_iomode -model pad<16, 8> 
+Execute         preproc_iomode -model max_pool<16, 16> 
+Execute         preproc_iomode -model conv<1, 16, 18> 
+Execute         preproc_iomode -model initialize_padded_memory<16, 10, 0> 
+Execute         get_model_list dut -filter all-wo-channel 
+INFO-FLOW: Model list for configure: {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut
+INFO-FLOW: Configuring Module : initialize_padded_memory<16, 10, 0> ...
+Execute         set_default_model initialize_padded_memory<16, 10, 0> 
+Execute         apply_spec_resource_limit initialize_padded_memory<16, 10, 0> 
+INFO-FLOW: Configuring Module : conv<1, 16, 18> ...
+Execute         set_default_model conv<1, 16, 18> 
+Execute         apply_spec_resource_limit conv<1, 16, 18> 
+INFO-FLOW: Configuring Module : max_pool<16, 16> ...
+Execute         set_default_model max_pool<16, 16> 
+Execute         apply_spec_resource_limit max_pool<16, 16> 
+INFO-FLOW: Configuring Module : pad<16, 8> ...
+Execute         set_default_model pad<16, 8> 
+Execute         apply_spec_resource_limit pad<16, 8> 
+INFO-FLOW: Configuring Module : conv<16, 32, 10> ...
+Execute         set_default_model conv<16, 32, 10> 
+Execute         apply_spec_resource_limit conv<16, 32, 10> 
+INFO-FLOW: Configuring Module : max_pool<32, 8> ...
+Execute         set_default_model max_pool<32, 8> 
+Execute         apply_spec_resource_limit max_pool<32, 8> 
+INFO-FLOW: Configuring Module : flatten ...
+Execute         set_default_model flatten 
+Execute         apply_spec_resource_limit flatten 
+INFO-FLOW: Configuring Module : dense<512, 256> ...
+Execute         set_default_model dense<512, 256> 
+Execute         apply_spec_resource_limit dense<512, 256> 
+INFO-FLOW: Configuring Module : sign<256> ...
+Execute         set_default_model sign<256> 
+Execute         apply_spec_resource_limit sign<256> 
+INFO-FLOW: Configuring Module : dense<256, 10> ...
+Execute         set_default_model dense<256, 10> 
+Execute         apply_spec_resource_limit dense<256, 10> 
+INFO-FLOW: Configuring Module : bnn_xcel ...
+Execute         set_default_model bnn_xcel 
+Execute         apply_spec_resource_limit bnn_xcel 
+INFO-FLOW: Configuring Module : dut ...
+Execute         set_default_model dut 
+Execute         apply_spec_resource_limit dut 
+INFO-FLOW: Model list for preprocess: {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut
+INFO-FLOW: Preprocessing Module: initialize_padded_memory<16, 10, 0> ...
+Execute         set_default_model initialize_padded_memory<16, 10, 0> 
+Execute         cdfg_preprocess -model initialize_padded_memory<16, 10, 0> 
+Execute         rtl_gen_preprocess initialize_padded_memory<16, 10, 0> 
+INFO-FLOW: Preprocessing Module: conv<1, 16, 18> ...
+Execute         set_default_model conv<1, 16, 18> 
+Execute         cdfg_preprocess -model conv<1, 16, 18> 
+Execute         rtl_gen_preprocess conv<1, 16, 18> 
+INFO-FLOW: Preprocessing Module: max_pool<16, 16> ...
+Execute         set_default_model max_pool<16, 16> 
+Execute         cdfg_preprocess -model max_pool<16, 16> 
+Execute         rtl_gen_preprocess max_pool<16, 16> 
+INFO-FLOW: Preprocessing Module: pad<16, 8> ...
+Execute         set_default_model pad<16, 8> 
+Execute         cdfg_preprocess -model pad<16, 8> 
+Execute         rtl_gen_preprocess pad<16, 8> 
+INFO-FLOW: Preprocessing Module: conv<16, 32, 10> ...
+Execute         set_default_model conv<16, 32, 10> 
+Execute         cdfg_preprocess -model conv<16, 32, 10> 
+Execute         rtl_gen_preprocess conv<16, 32, 10> 
+INFO-FLOW: Preprocessing Module: max_pool<32, 8> ...
+Execute         set_default_model max_pool<32, 8> 
+Execute         cdfg_preprocess -model max_pool<32, 8> 
+Execute         rtl_gen_preprocess max_pool<32, 8> 
+INFO-FLOW: Preprocessing Module: flatten ...
+Execute         set_default_model flatten 
+Execute         cdfg_preprocess -model flatten 
+Execute         rtl_gen_preprocess flatten 
+INFO-FLOW: Preprocessing Module: dense<512, 256> ...
+Execute         set_default_model dense<512, 256> 
+Execute         cdfg_preprocess -model dense<512, 256> 
+Execute         rtl_gen_preprocess dense<512, 256> 
+INFO-FLOW: Preprocessing Module: sign<256> ...
+Execute         set_default_model sign<256> 
+Execute         cdfg_preprocess -model sign<256> 
+Execute         rtl_gen_preprocess sign<256> 
+INFO-FLOW: Preprocessing Module: dense<256, 10> ...
+Execute         set_default_model dense<256, 10> 
+Execute         cdfg_preprocess -model dense<256, 10> 
+Execute         rtl_gen_preprocess dense<256, 10> 
+INFO-FLOW: Preprocessing Module: bnn_xcel ...
+Execute         set_default_model bnn_xcel 
+Execute         cdfg_preprocess -model bnn_xcel 
+Execute         rtl_gen_preprocess bnn_xcel 
+INFO-FLOW: Preprocessing Module: dut ...
+Execute         set_default_model dut 
+Execute         cdfg_preprocess -model dut 
+Execute         rtl_gen_preprocess dut 
+INFO-FLOW: Model list for synthesis: {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'initialize_padded_memory_16_10_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model initialize_padded_memory<16, 10, 0> 
+Execute         schedule -model initialize_padded_memory<16, 10, 0> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 349.22 seconds; current allocated memory: 568.993 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.verbose.sched.rpt 
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.sched.adb -f 
+INFO-FLOW: Finish scheduling initialize_padded_memory<16, 10, 0>.
+Execute         set_default_model initialize_padded_memory<16, 10, 0> 
+Execute         bind -model initialize_padded_memory<16, 10, 0> 
+BIND OPTION: model=initialize_padded_memory<16, 10, 0>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 569.162 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.verbose.bind.rpt 
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.bind.adb -f 
+INFO-FLOW: Finish binding initialize_padded_memory<16, 10, 0>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_1_16_18_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model conv<1, 16, 18> 
+Execute         schedule -model conv<1, 16, 18> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_load_10', ./layer.h:76) on array 'input_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'input_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.13 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 569.543 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.verbose.sched.rpt 
+Command         syn_report done; 0.14 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.sched.adb -f 
+Command         db_write done; 0.15 sec.
+INFO-FLOW: Finish scheduling conv<1, 16, 18>.
+Execute         set_default_model conv<1, 16, 18> 
+Execute         bind -model conv<1, 16, 18> 
+BIND OPTION: model=conv<1, 16, 18>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 570.016 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.verbose.bind.rpt 
+Command         syn_report done; 0.25 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.bind.adb -f 
+Command         db_write done; 0.16 sec.
+INFO-FLOW: Finish binding conv<1, 16, 18>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'max_pool_16_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model max_pool<16, 16> 
+Execute         schedule -model max_pool<16, 16> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_MP_M_LOOP_MP_X_LOOP_MP_Y'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_load_5', ./layer.h:110) on array 'input_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'input_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.55 seconds; current allocated memory: 570.290 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.verbose.sched.rpt 
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.sched.adb -f 
+INFO-FLOW: Finish scheduling max_pool<16, 16>.
+Execute         set_default_model max_pool<16, 16> 
+Execute         bind -model max_pool<16, 16> 
+BIND OPTION: model=max_pool<16, 16>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 570.614 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.verbose.bind.rpt 
+Command         syn_report done; 0.13 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.bind.adb -f 
+INFO-FLOW: Finish binding max_pool<16, 16>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pad_16_8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model pad<16, 8> 
+Execute         schedule -model pad<16, 8> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 570.804 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.verbose.sched.rpt 
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.sched.adb -f 
+INFO-FLOW: Finish scheduling pad<16, 8>.
+Execute         set_default_model pad<16, 8> 
+Execute         bind -model pad<16, 8> 
+BIND OPTION: model=pad<16, 8>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 570.991 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.verbose.bind.rpt 
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.bind.adb -f 
+INFO-FLOW: Finish binding pad<16, 8>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_16_32_10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model conv<16, 32, 10> 
+Execute         schedule -model conv<16, 32, 10> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_load_8', ./layer.h:76) on array 'input_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'input_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.27 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 572.047 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.verbose.sched.rpt 
+Command         syn_report done; 0.41 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.sched.adb -f 
+Command         db_write done; 0.45 sec.
+INFO-FLOW: Finish scheduling conv<16, 32, 10>.
+Execute         set_default_model conv<16, 32, 10> 
+Execute         bind -model conv<16, 32, 10> 
+BIND OPTION: model=conv<16, 32, 10>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.22 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.08 seconds; current allocated memory: 573.470 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.verbose.bind.rpt 
+Command         syn_report done; 0.84 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.bind.adb -f 
+Command         db_write done; 0.49 sec.
+INFO-FLOW: Finish binding conv<16, 32, 10>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'max_pool_32_8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model max_pool<32, 8> 
+Execute         schedule -model max_pool<32, 8> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_MP_M_LOOP_MP_X_LOOP_MP_Y'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_load_2', ./layer.h:110) on array 'input_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'input_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.13 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.48 seconds; current allocated memory: 573.863 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.verbose.sched.rpt 
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.sched.adb -f 
+INFO-FLOW: Finish scheduling max_pool<32, 8>.
+Execute         set_default_model max_pool<32, 8> 
+Execute         bind -model max_pool<32, 8> 
+BIND OPTION: model=max_pool<32, 8>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 574.183 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.verbose.bind.rpt 
+Command         syn_report done; 0.17 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.bind.adb -f 
+INFO-FLOW: Finish binding max_pool<32, 8>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'flatten' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model flatten 
+Execute         schedule -model flatten 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 15.52 sec.
+INFO: [HLS 200-111]  Elapsed time: 15.81 seconds; current allocated memory: 579.980 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.verbose.sched.rpt 
+Command         syn_report done; 2.79 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.sched.adb -f 
+Command         db_write done; 3.47 sec.
+INFO-FLOW: Finish scheduling flatten.
+Execute         set_default_model flatten 
+Execute         bind -model flatten 
+BIND OPTION: model=flatten
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.87 sec.
+INFO: [HLS 200-111]  Elapsed time: 7.14 seconds; current allocated memory: 581.179 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.verbose.bind.rpt 
+Command         syn_report done; 2.34 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.bind.adb -f 
+Command         db_write done; 3.22 sec.
+INFO-FLOW: Finish binding flatten.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_512_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model dense<512, 256> 
+Execute         schedule -model dense<512, 256> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 5.99 sec.
+INFO: [HLS 200-111]  Elapsed time: 11.57 seconds; current allocated memory: 593.536 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.verbose.sched.rpt 
+Command         syn_report done; 4.17 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.sched.adb -f 
+Command         db_write done; 5.1 sec.
+INFO-FLOW: Finish scheduling dense<512, 256>.
+Execute         set_default_model dense<512, 256> 
+Execute         bind -model dense<512, 256> 
+BIND OPTION: model=dense<512, 256>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 1.82 sec.
+INFO: [HLS 200-111]  Elapsed time: 11.1 seconds; current allocated memory: 610.962 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.verbose.bind.rpt 
+Command         syn_report done; 7.02 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.bind.adb -f 
+Command         db_write done; 4.79 sec.
+INFO-FLOW: Finish binding dense<512, 256>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sign_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model sign<256> 
+Execute         schedule -model sign<256> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.32 sec.
+INFO: [HLS 200-111]  Elapsed time: 12.16 seconds; current allocated memory: 614.294 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.verbose.sched.rpt 
+Command         syn_report done; 0.6 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.sched.adb -f 
+Command         db_write done; 0.76 sec.
+INFO-FLOW: Finish scheduling sign<256>.
+Execute         set_default_model sign<256> 
+Execute         bind -model sign<256> 
+BIND OPTION: model=sign<256>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.33 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.69 seconds; current allocated memory: 616.880 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.verbose.bind.rpt 
+Command         syn_report done; 1.02 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.bind.adb -f 
+Command         db_write done; 0.82 sec.
+INFO-FLOW: Finish binding sign<256>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_256_10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model dense<256, 10> 
+Execute         schedule -model dense<256, 10> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 1.04 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.92 seconds; current allocated memory: 621.830 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.verbose.sched.rpt 
+Command         syn_report done; 1.53 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.sched.adb -f 
+Command         db_write done; 1.74 sec.
+INFO-FLOW: Finish scheduling dense<256, 10>.
+Execute         set_default_model dense<256, 10> 
+Execute         bind -model dense<256, 10> 
+BIND OPTION: model=dense<256, 10>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.68 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.97 seconds; current allocated memory: 628.095 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.verbose.bind.rpt 
+Command         syn_report done; 3.06 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.bind.adb -f 
+Command         db_write done; 1.75 sec.
+INFO-FLOW: Finish binding dense<256, 10>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bnn_xcel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model bnn_xcel 
+Execute         schedule -model bnn_xcel 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.24 sec.
+INFO: [HLS 200-111]  Elapsed time: 5.1 seconds; current allocated memory: 630.988 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.verbose.sched.rpt 
+Command         syn_report done; 0.78 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.sched.adb -f 
+Command         db_write done; 1.04 sec.
+INFO-FLOW: Finish scheduling bnn_xcel.
+Execute         set_default_model bnn_xcel 
+Execute         bind -model bnn_xcel 
+BIND OPTION: model=bnn_xcel
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 15.3 sec.
+INFO: [HLS 200-111]  Elapsed time: 17.12 seconds; current allocated memory: 641.935 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.verbose.bind.rpt 
+Command         syn_report done; 8.59 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.bind.adb -f 
+Command         db_write done; 1.4 sec.
+INFO-FLOW: Finish binding bnn_xcel.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model dut 
+Execute         schedule -model dut 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 10.16 seconds; current allocated memory: 644.792 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.verbose.sched.rpt 
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.sched.adb -f 
+INFO-FLOW: Finish scheduling dut.
+Execute         set_default_model dut 
+Execute         bind -model dut 
+BIND OPTION: model=dut
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 2.58 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.68 seconds; current allocated memory: 645.883 MB.
+Execute         syn_report -verbosereport -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.verbose.bind.rpt 
+Command         syn_report done; 7.69 sec.
+Execute         db_write -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.bind.adb -f 
+INFO-FLOW: Finish binding dut.
+Execute         get_model_list dut -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess initialize_padded_memory<16, 10, 0> 
+Execute         rtl_gen_preprocess conv<1, 16, 18> 
+Execute         rtl_gen_preprocess max_pool<16, 16> 
+Execute         rtl_gen_preprocess pad<16, 8> 
+Execute         rtl_gen_preprocess conv<16, 32, 10> 
+Execute         rtl_gen_preprocess max_pool<32, 8> 
+Execute         rtl_gen_preprocess flatten 
+Execute         rtl_gen_preprocess dense<512, 256> 
+Execute         rtl_gen_preprocess sign<256> 
+Execute         rtl_gen_preprocess dense<256, 10> 
+Execute         rtl_gen_preprocess bnn_xcel 
+Execute         rtl_gen_preprocess dut 
+INFO-FLOW: Model list for RTL generation: {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'initialize_padded_memory_16_10_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model initialize_padded_memory<16, 10, 0> -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'initialize_padded_memory_16_10_0_s'.
+INFO: [HLS 200-111]  Elapsed time: 7.83 seconds; current allocated memory: 648.801 MB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl initialize_padded_memory<16, 10, 0> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/initialize_padded_memory_16_10_0_s -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl initialize_padded_memory<16, 10, 0> -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/initialize_padded_memory_16_10_0_s 
+Execute         gen_rtl initialize_padded_memory<16, 10, 0> -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/initialize_padded_memory_16_10_0_s 
+Execute         syn_report -csynth -model initialize_padded_memory<16, 10, 0> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/initialize_padded_memory_16_10_0_s_csynth.rpt 
+Execute         syn_report -rtlxml -model initialize_padded_memory<16, 10, 0> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/initialize_padded_memory_16_10_0_s_csynth.xml 
+Execute         syn_report -verbosereport -model initialize_padded_memory<16, 10, 0> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.verbose.rpt 
+Execute         db_write -model initialize_padded_memory<16, 10, 0> -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.adb 
+Execute         gen_tb_info initialize_padded_memory<16, 10, 0> -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_1_16_18_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model conv<1, 16, 18> -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_1_16_18_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 650.355 MB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl conv<1, 16, 18> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/conv_1_16_18_s -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl conv<1, 16, 18> -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/conv_1_16_18_s 
+Execute         gen_rtl conv<1, 16, 18> -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/conv_1_16_18_s 
+Execute         syn_report -csynth -model conv<1, 16, 18> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/conv_1_16_18_s_csynth.rpt 
+Execute         syn_report -rtlxml -model conv<1, 16, 18> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/conv_1_16_18_s_csynth.xml 
+Execute         syn_report -verbosereport -model conv<1, 16, 18> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.verbose.rpt 
+Command         syn_report done; 0.31 sec.
+Execute         db_write -model conv<1, 16, 18> -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.adb 
+Command         db_write done; 0.24 sec.
+Execute         gen_tb_info conv<1, 16, 18> -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'max_pool_16_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model max_pool<16, 16> -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pool_16_16_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.85 seconds; current allocated memory: 652.981 MB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl max_pool<16, 16> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/max_pool_16_16_s -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl max_pool<16, 16> -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/max_pool_16_16_s 
+Execute         gen_rtl max_pool<16, 16> -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/max_pool_16_16_s 
+Execute         syn_report -csynth -model max_pool<16, 16> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/max_pool_16_16_s_csynth.rpt 
+Execute         syn_report -rtlxml -model max_pool<16, 16> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/max_pool_16_16_s_csynth.xml 
+Execute         syn_report -verbosereport -model max_pool<16, 16> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.verbose.rpt 
+Command         syn_report done; 0.21 sec.
+Execute         db_write -model max_pool<16, 16> -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.adb 
+Command         db_write done; 0.18 sec.
+Execute         gen_tb_info max_pool<16, 16> -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pad_16_8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model pad<16, 8> -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pad_16_8_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.61 seconds; current allocated memory: 654.533 MB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl pad<16, 8> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/pad_16_8_s -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl pad<16, 8> -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/pad_16_8_s 
+Execute         gen_rtl pad<16, 8> -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/pad_16_8_s 
+Execute         syn_report -csynth -model pad<16, 8> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/pad_16_8_s_csynth.rpt 
+Execute         syn_report -rtlxml -model pad<16, 8> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/pad_16_8_s_csynth.xml 
+Execute         syn_report -verbosereport -model pad<16, 8> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.verbose.rpt 
+Execute         db_write -model pad<16, 8> -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.adb 
+Command         db_write done; 0.24 sec.
+Execute         gen_tb_info pad<16, 8> -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_16_32_10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model conv<16, 32, 10> -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_16_32_10_s'.
+Command         create_rtl_model done; 0.13 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 657.614 MB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl conv<16, 32, 10> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/conv_16_32_10_s -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl conv<16, 32, 10> -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/conv_16_32_10_s 
+Execute         gen_rtl conv<16, 32, 10> -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/conv_16_32_10_s 
+Execute         syn_report -csynth -model conv<16, 32, 10> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/conv_16_32_10_s_csynth.rpt 
+Command         syn_report done; 0.32 sec.
+Execute         syn_report -rtlxml -model conv<16, 32, 10> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/conv_16_32_10_s_csynth.xml 
+Command         syn_report done; 0.14 sec.
+Execute         syn_report -verbosereport -model conv<16, 32, 10> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.verbose.rpt 
+Command         syn_report done; 1.04 sec.
+Execute         db_write -model conv<16, 32, 10> -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.adb 
+Command         db_write done; 0.83 sec.
+Execute         gen_tb_info conv<16, 32, 10> -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'max_pool_32_8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model max_pool<32, 8> -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pool_32_8_s'.
+INFO: [HLS 200-111]  Elapsed time: 2.59 seconds; current allocated memory: 664.518 MB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl max_pool<32, 8> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/max_pool_32_8_s -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl max_pool<32, 8> -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/max_pool_32_8_s 
+Execute         gen_rtl max_pool<32, 8> -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/max_pool_32_8_s 
+Execute         syn_report -csynth -model max_pool<32, 8> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/max_pool_32_8_s_csynth.rpt 
+Execute         syn_report -rtlxml -model max_pool<32, 8> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/max_pool_32_8_s_csynth.xml 
+Execute         syn_report -verbosereport -model max_pool<32, 8> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.verbose.rpt 
+Command         syn_report done; 0.17 sec.
+Execute         db_write -model max_pool<32, 8> -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.adb 
+Command         db_write done; 0.36 sec.
+Execute         gen_tb_info max_pool<32, 8> -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'flatten' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model flatten -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'flatten'.
+Command         create_rtl_model done; 33.34 sec.
+INFO: [HLS 200-111]  Elapsed time: 34.07 seconds; current allocated memory: 1.205 GB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl flatten -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/flatten -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl flatten -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/flatten 
+Execute         gen_rtl flatten -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/flatten 
+Execute         syn_report -csynth -model flatten -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/flatten_csynth.rpt 
+Command         syn_report done; 0.17 sec.
+Execute         syn_report -rtlxml -model flatten -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/flatten_csynth.xml 
+Execute         syn_report -verbosereport -model flatten -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.verbose.rpt 
+Command         syn_report done; 3.09 sec.
+Execute         db_write -model flatten -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.adb 
+Command         db_write done; 4.01 sec.
+Execute         gen_tb_info flatten -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_512_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model dense<512, 256> -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_2568_512_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_512_256_s'.
+Command         create_rtl_model done; 9.95 sec.
+INFO: [HLS 200-111]  Elapsed time: 18.36 seconds; current allocated memory: 1.407 GB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl dense<512, 256> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/dense_512_256_s -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl dense<512, 256> -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/dense_512_256_s 
+Execute         gen_rtl dense<512, 256> -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/dense_512_256_s 
+Execute         syn_report -csynth -model dense<512, 256> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/dense_512_256_s_csynth.rpt 
+Command         syn_report done; 2.25 sec.
+Execute         syn_report -rtlxml -model dense<512, 256> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/dense_512_256_s_csynth.xml 
+Command         syn_report done; 1.18 sec.
+Execute         syn_report -verbosereport -model dense<512, 256> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.verbose.rpt 
+Command         syn_report done; 9.24 sec.
+Execute         db_write -model dense<512, 256> -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.adb 
+Command         db_write done; 9.55 sec.
+Execute         gen_tb_info dense<512, 256> -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sign_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model sign<256> -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sign_256_s'.
+Command         create_rtl_model done; 6.16 sec.
+INFO: [HLS 200-111]  Elapsed time: 30.39 seconds; current allocated memory: 1.621 GB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl sign<256> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/sign_256_s -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl sign<256> -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/sign_256_s 
+Execute         gen_rtl sign<256> -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/sign_256_s 
+Execute         syn_report -csynth -model sign<256> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/sign_256_s_csynth.rpt 
+Command         syn_report done; 0.33 sec.
+Execute         syn_report -rtlxml -model sign<256> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/sign_256_s_csynth.xml 
+Command         syn_report done; 0.16 sec.
+Execute         syn_report -verbosereport -model sign<256> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.verbose.rpt 
+Command         syn_report done; 1.26 sec.
+Execute         db_write -model sign<256> -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.adb 
+Command         db_write done; 2.51 sec.
+Execute         gen_tb_info sign<256> -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_256_10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model dense<256, 10> -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_164_256_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_256_10_s'.
+Command         create_rtl_model done; 0.34 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.98 seconds; current allocated memory: 1.634 GB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl dense<256, 10> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/dense_256_10_s -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl dense<256, 10> -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/dense_256_10_s 
+Execute         gen_rtl dense<256, 10> -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/dense_256_10_s 
+Execute         syn_report -csynth -model dense<256, 10> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/dense_256_10_s_csynth.rpt 
+Command         syn_report done; 1.28 sec.
+Execute         syn_report -rtlxml -model dense<256, 10> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/dense_256_10_s_csynth.xml 
+Command         syn_report done; 0.52 sec.
+Execute         syn_report -verbosereport -model dense<256, 10> -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.verbose.rpt 
+Command         syn_report done; 3.96 sec.
+Execute         db_write -model dense<256, 10> -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.adb 
+Command         db_write done; 5.03 sec.
+Execute         gen_tb_info dense<256, 10> -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bnn_xcel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model bnn_xcel -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn_xcel'.
+Command         create_rtl_model done; 24.1 sec.
+INFO: [HLS 200-111]  Elapsed time: 35.71 seconds; current allocated memory: 2.144 GB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl bnn_xcel -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/bnn_xcel -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl bnn_xcel -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/bnn_xcel 
+Execute         gen_rtl bnn_xcel -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/bnn_xcel 
+Execute         syn_report -csynth -model bnn_xcel -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/bnn_xcel_csynth.rpt 
+Command         syn_report done; 0.28 sec.
+Execute         syn_report -rtlxml -model bnn_xcel -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/bnn_xcel_csynth.xml 
+Command         syn_report done; 0.13 sec.
+Execute         syn_report -verbosereport -model bnn_xcel -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.verbose.rpt 
+Command         syn_report done; 7.77 sec.
+Execute         db_write -model bnn_xcel -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.adb 
+Command         db_write done; 3.32 sec.
+Execute         gen_tb_info bnn_xcel -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model dut -vendor xilinx -mg_file /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_in_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_out_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
+INFO: [HLS 200-111]  Elapsed time: 12.08 seconds; current allocated memory: 2.146 GB.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         gen_rtl dut -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/systemc/dut -synmodules {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut 
+Execute         gen_rtl dut -istop -style xilinx -f -lang vhdl -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/vhdl/dut 
+Execute         gen_rtl dut -istop -style xilinx -f -lang vlog -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/verilog/dut 
+Execute         syn_report -csynth -model dut -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/dut_csynth.rpt 
+Execute         syn_report -rtlxml -model dut -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/syn/report/dut_csynth.xml 
+Execute         syn_report -verbosereport -model dut -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.verbose.rpt 
+Command         syn_report done; 6.93 sec.
+Execute         db_write -model dut -f -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.adb 
+Command         db_write done; 2.11 sec.
+Execute         gen_tb_info dut -p /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut 
+Execute         export_constraint_db -f -tool general -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.constraint.tcl 
+Execute         syn_report -designview -model dut -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.design.xml 
+Command         syn_report done; 4.6 sec.
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model dut -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model dut -o /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks dut 
+Execute         get_config_export -vivado_clock 
+Execute         sc_get_portdomain dut 
+INFO-FLOW: Model list for RTL component generation: {initialize_padded_memory<16, 10, 0>} {conv<1, 16, 18>} {max_pool<16, 16>} {pad<16, 8>} {conv<16, 32, 10>} {max_pool<32, 8>} flatten {dense<512, 256>} sign<256> {dense<256, 10>} bnn_xcel dut
+INFO-FLOW: Handling components in module [initialize_padded_memory_16_10_0_s] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.compgen.tcl 
+INFO-FLOW: Handling components in module [conv_1_16_18_s] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.compgen.tcl 
+INFO-FLOW: Found component conv_1_16_18_s_w_conv1_0.
+INFO-FLOW: Append model conv_1_16_18_s_w_conv1_0
+INFO-FLOW: Found component conv_1_16_18_s_w_conv1_1.
+INFO-FLOW: Append model conv_1_16_18_s_w_conv1_1
+INFO-FLOW: Found component conv_1_16_18_s_w_conv1_2.
+INFO-FLOW: Append model conv_1_16_18_s_w_conv1_2
+INFO-FLOW: Handling components in module [max_pool_16_16_s] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.compgen.tcl 
+INFO-FLOW: Handling components in module [pad_16_8_s] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.compgen.tcl 
+INFO-FLOW: Handling components in module [conv_16_32_10_s] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.compgen.tcl 
+INFO-FLOW: Found component conv_16_32_10_s_w_conv2_0.
+INFO-FLOW: Append model conv_16_32_10_s_w_conv2_0
+INFO-FLOW: Found component conv_16_32_10_s_w_conv2_1.
+INFO-FLOW: Append model conv_16_32_10_s_w_conv2_1
+INFO-FLOW: Found component conv_16_32_10_s_w_conv2_2.
+INFO-FLOW: Append model conv_16_32_10_s_w_conv2_2
+INFO-FLOW: Handling components in module [max_pool_32_8_s] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.compgen.tcl 
+INFO-FLOW: Handling components in module [flatten] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.compgen.tcl 
+INFO-FLOW: Handling components in module [dense_512_256_s] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.compgen.tcl 
+INFO-FLOW: Found component dut_mux_2568_512_1_1.
+INFO-FLOW: Append model dut_mux_2568_512_1_1
+INFO-FLOW: Handling components in module [sign_256_s] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.compgen.tcl 
+INFO-FLOW: Handling components in module [dense_256_10_s] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.compgen.tcl 
+INFO-FLOW: Found component dut_mux_164_256_1_1.
+INFO-FLOW: Append model dut_mux_164_256_1_1
+INFO-FLOW: Handling components in module [bnn_xcel] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.compgen.tcl 
+INFO-FLOW: Found component bnn_xcel_input_padded.
+INFO-FLOW: Append model bnn_xcel_input_padded
+INFO-FLOW: Found component bnn_xcel_conv1.
+INFO-FLOW: Append model bnn_xcel_conv1
+INFO-FLOW: Found component bnn_xcel_conv1_pooled.
+INFO-FLOW: Append model bnn_xcel_conv1_pooled
+INFO-FLOW: Found component bnn_xcel_conv1_pooled_padded.
+INFO-FLOW: Append model bnn_xcel_conv1_pooled_padded
+INFO-FLOW: Found component bnn_xcel_conv2.
+INFO-FLOW: Append model bnn_xcel_conv2
+INFO-FLOW: Found component bnn_xcel_conv2_pooled.
+INFO-FLOW: Append model bnn_xcel_conv2_pooled
+INFO-FLOW: Found component bnn_xcel_dense2_V.
+INFO-FLOW: Append model bnn_xcel_dense2_V
+INFO-FLOW: Handling components in module [dut] ... 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.compgen.tcl 
+INFO-FLOW: Found component dut_input_0.
+INFO-FLOW: Append model dut_input_0
+INFO-FLOW: Append model initialize_padded_memory_16_10_0_s
+INFO-FLOW: Append model conv_1_16_18_s
+INFO-FLOW: Append model max_pool_16_16_s
+INFO-FLOW: Append model pad_16_8_s
+INFO-FLOW: Append model conv_16_32_10_s
+INFO-FLOW: Append model max_pool_32_8_s
+INFO-FLOW: Append model flatten
+INFO-FLOW: Append model dense_512_256_s
+INFO-FLOW: Append model sign_256_s
+INFO-FLOW: Append model dense_256_10_s
+INFO-FLOW: Append model bnn_xcel
+INFO-FLOW: Append model dut
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: conv_1_16_18_s_w_conv1_0 conv_1_16_18_s_w_conv1_1 conv_1_16_18_s_w_conv1_2 conv_16_32_10_s_w_conv2_0 conv_16_32_10_s_w_conv2_1 conv_16_32_10_s_w_conv2_2 dut_mux_2568_512_1_1 dut_mux_164_256_1_1 bnn_xcel_input_padded bnn_xcel_conv1 bnn_xcel_conv1_pooled bnn_xcel_conv1_pooled_padded bnn_xcel_conv2 bnn_xcel_conv2_pooled bnn_xcel_dense2_V dut_input_0 initialize_padded_memory_16_10_0_s conv_1_16_18_s max_pool_16_16_s pad_16_8_s conv_16_32_10_s max_pool_32_8_s flatten dense_512_256_s sign_256_s dense_256_10_s bnn_xcel dut
+INFO-FLOW: To file: write model conv_1_16_18_s_w_conv1_0
+INFO-FLOW: To file: write model conv_1_16_18_s_w_conv1_1
+INFO-FLOW: To file: write model conv_1_16_18_s_w_conv1_2
+INFO-FLOW: To file: write model conv_16_32_10_s_w_conv2_0
+INFO-FLOW: To file: write model conv_16_32_10_s_w_conv2_1
+INFO-FLOW: To file: write model conv_16_32_10_s_w_conv2_2
+INFO-FLOW: To file: write model dut_mux_2568_512_1_1
+INFO-FLOW: To file: write model dut_mux_164_256_1_1
+INFO-FLOW: To file: write model bnn_xcel_input_padded
+INFO-FLOW: To file: write model bnn_xcel_conv1
+INFO-FLOW: To file: write model bnn_xcel_conv1_pooled
+INFO-FLOW: To file: write model bnn_xcel_conv1_pooled_padded
+INFO-FLOW: To file: write model bnn_xcel_conv2
+INFO-FLOW: To file: write model bnn_xcel_conv2_pooled
+INFO-FLOW: To file: write model bnn_xcel_dense2_V
+INFO-FLOW: To file: write model dut_input_0
+INFO-FLOW: To file: write model initialize_padded_memory_16_10_0_s
+INFO-FLOW: To file: write model conv_1_16_18_s
+INFO-FLOW: To file: write model max_pool_16_16_s
+INFO-FLOW: To file: write model pad_16_8_s
+INFO-FLOW: To file: write model conv_16_32_10_s
+INFO-FLOW: To file: write model max_pool_32_8_s
+INFO-FLOW: To file: write model flatten
+INFO-FLOW: To file: write model dense_512_256_s
+INFO-FLOW: To file: write model sign_256_s
+INFO-FLOW: To file: write model dense_256_10_s
+INFO-FLOW: To file: write model bnn_xcel
+INFO-FLOW: To file: write model dut
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute         syn_report -model dut -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.19 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.18 sec.
+Command         ap_source done; 0.18 sec.
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'conv_1_16_18_s_w_conv1_0_rom' using distributed ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'conv_1_16_18_s_w_conv1_1_rom' using distributed ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'conv_1_16_18_s_w_conv1_2_rom' using distributed ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.62 sec.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'conv_16_32_10_s_w_conv2_0_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'conv_16_32_10_s_w_conv2_1_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'conv_16_32_10_s_w_conv2_2_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.51 sec.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'bnn_xcel_input_padded_ram (RAM)' using distributed RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'bnn_xcel_conv1_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'bnn_xcel_conv1_pooled_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'bnn_xcel_conv1_pooled_padded_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'bnn_xcel_conv2_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'bnn_xcel_conv2_pooled_ram (RAM)' using distributed RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'bnn_xcel_dense2_V_ram (RAM)' using distributed RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.62 sec.
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'dut_input_0_ram (RAM)' using distributed RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.13 sec.
+Command         ap_source done; 0.13 sec.
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=dut xml_exists=0
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.42 sec.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.compgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.constraint.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=6
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=2
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=28 #gSsdmPorts=6
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -xo 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_sdx -target 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.compgen.dataonly.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.constraint.tcl 
+Execute         sc_get_clocks dut 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_debug -directory 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/initialize_padded_memory_16_10_0_s.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_1_16_18_s.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_16_16_s.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/pad_16_8_s.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/conv_16_32_10_s.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/max_pool_32_8_s.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/flatten.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_512_256_s.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/sign_256_s.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dense_256_10_s.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/bnn_xcel.tbgen.tcl 
+Execute         source /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/dut.tbgen.tcl 
+Execute         get_config_sdx -target 
+Execute         get_config_sdx -profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/nnd25/ECE6775/lab4/ecelinux/bnn_reshape.prj/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:09:19 ; elapsed = 00:10:26 . Memory (MB): peak = 3489.727 ; gain = 2847.234 ; free physical = 258 ; free virtual = 11397
+INFO: [VHDL 208-304] Generating VHDL RTL for dut.
+INFO: [VLOG 209-307] Generating Verilog RTL for dut.
+Command       autosyn done; 277.51 sec.
+Command     csynth_design done; 610.05 sec.
+Execute     cleanup_all 
+Command     cleanup_all done; 1.38 sec.

@@ -44,16 +44,32 @@ void dut(hls::stream<bit32_t> &strm_in, hls::stream<bit32_t> &strm_out) {
 // @return : the predicted digit
 
 bit32_t bnn_xcel(bit input[1][I_WIDTH1][I_WIDTH1]) {
+  #pragma HLS array_reshape variable=w_conv1 complete dim=1
+  #pragma HLS array_reshape variable=w_conv2 complete dim=1
+  #pragma HLS array_reshape variable=w_fc1 complete dim=1
+  #pragma HLS array_reshape variable=w_fc2 complete dim=1
+  #pragma HLS array_reshape variable=threshold_conv1 complete
+  #pragma HLS array_reshape variable=threshold_conv2 complete
+
+
   bit input_padded[I_CHANNEL1][I_WIDTH1 + F_PAD][I_WIDTH1 + F_PAD];
+  #pragma HLS array_reshape variable=input_padded dim=1
   initialize_padded_memory<I_CHANNEL1, I_WIDTH1 + F_PAD, 1>(input_padded);
+
   bit conv1[O_CHANNEL1][I_WIDTH1][I_WIDTH1];
   bit conv1_pooled[O_CHANNEL1][I_WIDTH2][I_WIDTH2];
   bit conv1_pooled_padded[O_CHANNEL1][I_WIDTH2 + F_PAD][I_WIDTH2 + F_PAD];
-
+  #pragma HLS array_reshape variable=conv1 dim=1
+  #pragma HLS array_reshape variable=conv1_pooled dim=1
+  #pragma HLS array_reshape variable=conv1_pooled_padded dim=1
+  
+  
   initialize_padded_memory<O_CHANNEL1, I_WIDTH2 + F_PAD, 0>(
       conv1_pooled_padded);
   bit conv2[O_CHANNEL2][I_WIDTH2][I_WIDTH2];
   bit conv2_pooled[O_CHANNEL2][O_WIDTH][O_WIDTH];
+  #pragma HLS array_reshape variable=conv2 dim=1
+  #pragma HLS array_reshape variable=conv2_pooled dim=1
 
   bit reshaped[I_UNITS1];
   bit16_t dense1[I_UNITS2];

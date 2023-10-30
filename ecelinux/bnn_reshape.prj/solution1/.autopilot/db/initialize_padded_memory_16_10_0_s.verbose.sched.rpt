@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vivado HLS Report for 'initialize_padded_memory_16_10_0_s'
+================================================================
+* Date:           Sun Oct 29 21:09:05 2023
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        bnn_reshape.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 6.508 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3553|     3553| 35.530 us | 35.530 us |  3553|  3553|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP_PAD_INIT_M     |     3552|     3552|       222|          -|          -|    16|    no    |
+        | + LOOP_PAD_INIT_X    |      220|      220|        22|          -|          -|    10|    no    |
+        |  ++ LOOP_PAD_INIT_Y  |       20|       20|         2|          -|          -|    10|    no    |
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 5 3 
+5 --> 4 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 6 [1/1] (1.76ns)   --->   "br label %1" [./layer.h:41]   --->   Operation 6 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.78>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%m_0 = phi i5 [ 0, %0 ], [ %m, %LOOP_PAD_INIT_M_end ]"   --->   Operation 7 'phi' 'm_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (1.36ns)   --->   "%icmp_ln41 = icmp eq i5 %m_0, -16" [./layer.h:41]   --->   Operation 8 'icmp' 'icmp_ln41' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 9 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (1.78ns)   --->   "%m = add i5 %m_0, 1" [./layer.h:41]   --->   Operation 10 'add' 'm' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %icmp_ln41, label %5, label %LOOP_PAD_INIT_M_begin" [./layer.h:41]   --->   Operation 11 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str26) nounwind" [./layer.h:41]   --->   Operation 12 'specloopname' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([16 x i8]* @p_str26)" [./layer.h:41]   --->   Operation 13 'specregionbegin' 'tmp' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln46 = zext i5 %m_0 to i6" [./layer.h:46]   --->   Operation 14 'zext' 'zext_ln46' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (1.76ns)   --->   "br label %2" [./layer.h:43]   --->   Operation 15 'br' <Predicate = (!icmp_ln41)> <Delay = 1.76>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "ret void" [./layer.h:50]   --->   Operation 16 'ret' <Predicate = (icmp_ln41)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.87>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%x_0 = phi i4 [ 0, %LOOP_PAD_INIT_M_begin ], [ %x, %LOOP_PAD_INIT_X_end ]"   --->   Operation 17 'phi' 'x_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (1.30ns)   --->   "%icmp_ln43 = icmp eq i4 %x_0, -6" [./layer.h:43]   --->   Operation 18 'icmp' 'icmp_ln43' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 19 'speclooptripcount' 'empty_14' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (1.73ns)   --->   "%x = add i4 %x_0, 1" [./layer.h:43]   --->   Operation 20 'add' 'x' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %icmp_ln43, label %LOOP_PAD_INIT_M_end, label %LOOP_PAD_INIT_X_begin" [./layer.h:43]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str27) nounwind" [./layer.h:43]   --->   Operation 22 'specloopname' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([16 x i8]* @p_str27)" [./layer.h:43]   --->   Operation 23 'specregionbegin' 'tmp_s' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_16 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %x_0, i3 0)" [./layer.h:46]   --->   Operation 24 'bitconcatenate' 'tmp_16' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln46_1 = zext i7 %tmp_16 to i8" [./layer.h:46]   --->   Operation 25 'zext' 'zext_ln46_1' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_17 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %x_0, i1 false)" [./layer.h:46]   --->   Operation 26 'bitconcatenate' 'tmp_17' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln46_2 = zext i5 %tmp_17 to i8" [./layer.h:46]   --->   Operation 27 'zext' 'zext_ln46_2' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (1.87ns)   --->   "%add_ln46 = add i8 %zext_ln46_2, %zext_ln46_1" [./layer.h:46]   --->   Operation 28 'add' 'add_ln46' <Predicate = (!icmp_ln43)> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 29 [1/1] (1.76ns)   --->   "br label %3" [./layer.h:45]   --->   Operation 29 'br' <Predicate = (!icmp_ln43)> <Delay = 1.76>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecRegionEnd([16 x i8]* @p_str26, i32 %tmp)" [./layer.h:49]   --->   Operation 30 'specregionend' 'empty_17' <Predicate = (icmp_ln43)> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "br label %1" [./layer.h:41]   --->   Operation 31 'br' <Predicate = (icmp_ln43)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 5.16>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%y_0 = phi i4 [ 0, %LOOP_PAD_INIT_X_begin ], [ %y, %4 ]"   --->   Operation 32 'phi' 'y_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (1.30ns)   --->   "%icmp_ln45 = icmp eq i4 %y_0, -6" [./layer.h:45]   --->   Operation 33 'icmp' 'icmp_ln45' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 34 'speclooptripcount' 'empty_15' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (1.73ns)   --->   "%y = add i4 %y_0, 1" [./layer.h:45]   --->   Operation 35 'add' 'y' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "br i1 %icmp_ln45, label %LOOP_PAD_INIT_X_end, label %4" [./layer.h:45]   --->   Operation 36 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln46_3 = zext i4 %y_0 to i8" [./layer.h:46]   --->   Operation 37 'zext' 'zext_ln46_3' <Predicate = (!icmp_ln45)> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (1.91ns)   --->   "%add_ln46_1 = add i8 %add_ln46, %zext_ln46_3" [./layer.h:46]   --->   Operation 38 'add' 'add_ln46_1' <Predicate = (!icmp_ln45)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln46_4 = zext i8 %add_ln46_1 to i64" [./layer.h:46]   --->   Operation 39 'zext' 'zext_ln46_4' <Predicate = (!icmp_ln45)> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%input_addr = getelementptr [100 x i16]* %input_r, i64 0, i64 %zext_ln46_4" [./layer.h:46]   --->   Operation 40 'getelementptr' 'input_addr' <Predicate = (!icmp_ln45)> <Delay = 0.00>
+ST_4 : Operation 41 [2/2] (3.25ns)   --->   "%input_load = load i16* %input_addr, align 2" [./layer.h:46]   --->   Operation 41 'load' 'input_load' <Predicate = (!icmp_ln45)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 100> <RAM>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([16 x i8]* @p_str27, i32 %tmp_s)" [./layer.h:48]   --->   Operation 42 'specregionend' 'empty_16' <Predicate = (icmp_ln45)> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "br label %2" [./layer.h:43]   --->   Operation 43 'br' <Predicate = (icmp_ln45)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 6.50>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str28) nounwind" [./layer.h:45]   --->   Operation 44 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 45 [1/2] (3.25ns)   --->   "%input_load = load i16* %input_addr, align 2" [./layer.h:46]   --->   Operation 45 'load' 'input_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 100> <RAM>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_18 = call i16 @_ssdm_op_BitSet.i16.i16.i6.i1(i16 %input_load, i6 %zext_ln46, i1 false)" [./layer.h:46]   --->   Operation 46 'bitset' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (3.25ns)   --->   "store i16 %tmp_18, i16* %input_addr, align 2" [./layer.h:46]   --->   Operation 47 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 100> <RAM>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "br label %3" [./layer.h:45]   --->   Operation 48 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('m') with incoming values : ('m', ./layer.h:41) [4]  (1.77 ns)
+
+ <State 2>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('m') with incoming values : ('m', ./layer.h:41) [4]  (0 ns)
+	'add' operation ('m', ./layer.h:41) [7]  (1.78 ns)
+
+ <State 3>: 1.87ns
+The critical path consists of the following:
+	'phi' operation ('x') with incoming values : ('x', ./layer.h:43) [15]  (0 ns)
+	'add' operation ('add_ln46', ./layer.h:46) [27]  (1.87 ns)
+
+ <State 4>: 5.17ns
+The critical path consists of the following:
+	'phi' operation ('y') with incoming values : ('y', ./layer.h:45) [30]  (0 ns)
+	'add' operation ('add_ln46_1', ./layer.h:46) [38]  (1.92 ns)
+	'getelementptr' operation ('input_addr', ./layer.h:46) [40]  (0 ns)
+	'load' operation ('input_load', ./layer.h:46) on array 'input_r' [41]  (3.25 ns)
+
+ <State 5>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('input_load', ./layer.h:46) on array 'input_r' [41]  (3.25 ns)
+	'store' operation ('store_ln46', ./layer.h:46) of variable 'tmp_18', ./layer.h:46 on array 'input_r' [43]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
